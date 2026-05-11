@@ -1,0 +1,44 @@
+@base_url = http://localhost:5000
+
+POST {{base_url}}/api/livro/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Livro 1",
+    "autor": "Autor 1",
+    "criadoEm": "2026-05-11T00:00:00"
+}
+
+###
+
+GET {{base_url}}/api/livro/listar
+
+###
+
+GET {{base_url}}/api/livro/buscar/Livro 1
+
+###
+
+PUT {{base_url}}/api/livro/emprestar
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+###
+
+PUT {{base_url}}/api/livro/devolver
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+###
+
+GET {{base_url}}/api/livro/disponiveis
+
+###
+
+GET {{base_url}}/api/livro/emprestados
